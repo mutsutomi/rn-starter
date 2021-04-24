@@ -4,7 +4,7 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
 const HomeScreen = ({navigation}) => {
   return( 
-    <View>
+    <View style={styles.buttons}>
       <Text style={styles.text}>This is home screen</Text>
       <Button
         onPress={()=>navigation.navigate('Components')}
@@ -45,7 +45,11 @@ const HomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 30
-  }
+  },
+  buttons:{
+    height:500,
+    justifyContent:"space-between"
+  },
 });
 
 export default HomeScreen;
